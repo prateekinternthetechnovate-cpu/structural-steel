@@ -1,0 +1,293 @@
+
+/* =================================
+   WORK PROCESS SECTION
+================================= */
+
+.work-section {
+  width: 100%;
+  padding: 70px 30px 65px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.work-container {
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* =================================
+   SECTION HEADING
+================================= */
+
+.work-heading {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.work-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #222222;
+  line-height: 1.3;
+  letter-spacing: -1px;
+  margin-bottom: 17px;
+}
+
+.work-heading h2 span {
+  color: #e8c15b;
+  font-weight: 700;
+}
+
+.work-heading p {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #292929;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =================================
+   WORK PROCESS LAYOUT
+================================= */
+
+.work-process {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    120px
+    minmax(0, 1fr)
+    120px
+    minmax(0, 1fr)
+    120px
+    minmax(0, 1fr);
+
+  align-items: start;
+  text-align: center;
+}
+
+.work-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+/* =================================
+   CIRCULAR ICON
+================================= */
+
+.work-icon-circle {
+  width: 117px;
+  height: 117px;
+  border: 11px solid #dfa91e;
+  border-radius: 50%;
+  background: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.work-step-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Icon Hover */
+
+.work-step:hover .work-icon-circle {
+  border-color: #c99713;
+  transform: translateY(-5px);
+}
+
+.work-step:hover .work-step-icon {
+  transform: scale(1.08);
+}
+
+/* =================================
+   HEADINGS AND PARAGRAPHS
+================================= */
+
+.work-step-content {
+  width: 100%;
+  margin-top: 27px;
+  text-align: center;
+}
+
+.work-step-content h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #252525;
+
+  line-height: 1.3;
+  margin-bottom: 10px;
+
+  white-space: nowrap;
+}
+
+.work-step-content p {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #292929;
+
+  line-height: 1.45;
+  max-width: 300px;
+
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =================================
+   CURVED ARROWS
+================================= */
+
+.work-arrow {
+  height: 117px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.work-arrow img {
+  width: 100%;
+  max-width: 130px;
+  height: 20px;
+  object-fit: fill;
+  display: block;
+}
+
+/* =================================
+   LAPTOP RESPONSIVE
+================================= */
+
+@media (max-width: 1200px) {
+
+  .work-section {
+    padding: 60px 25px;
+  }
+
+  .work-process {
+    grid-template-columns:
+      minmax(0, 1fr)
+      75px
+      minmax(0, 1fr)
+      75px
+      minmax(0, 1fr)
+      75px
+      minmax(0, 1fr);
+  }
+
+  .work-arrow img {
+    max-width: 85px;
+  }
+
+  .work-step-content h3 {
+    font-size: 17px;
+    white-space: normal;
+  }
+
+  .work-step-content p {
+    font-size: 14px;
+  }
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 991px) {
+
+  .work-heading h2 {
+    font-size: 30px;
+  }
+
+  .work-process {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+    row-gap: 45px;
+  }
+
+  .work-arrow {
+    display: none;
+  }
+
+  .work-step-content h3 {
+    font-size: 19px;
+    white-space: normal;
+  }
+
+  .work-step-content p {
+    max-width: 320px;
+  }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 576px) {
+
+  .work-section {
+    padding: 45px 20px;
+  }
+
+  .work-heading {
+    margin-bottom: 35px;
+  }
+
+  .work-heading h2 {
+    font-size: 25px;
+    letter-spacing: -0.5px;
+  }
+
+  .work-heading p {
+    font-size: 14px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .work-process {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .work-icon-circle {
+    width: 105px;
+    height: 105px;
+    border-width: 9px;
+  }
+
+  .work-step-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .work-step-content {
+    margin-top: 20px;
+  }
+
+  .work-step-content h3 {
+    font-size: 19px;
+    white-space: normal;
+  }
+
+  .work-step-content p {
+    font-size: 14px;
+    max-width: 320px;
+  }
+}

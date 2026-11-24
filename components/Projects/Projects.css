@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap');
+
+.projects-section {
+  background-color: #fcf9f0;
+  padding: 72px 24px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1c1c1c;
+}
+
+.projects-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Header */
+.projects-header {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.projects-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #18181b;
+  margin: 0 0 12px 0;
+}
+
+.projects-highlight {
+  color: #deb13a;
+  font-weight: 800;
+}
+
+.projects-subtitle {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #3f3f46;
+  margin: 0 auto 24px;
+}
+
+/* Filter Pills */
+.projects-filters {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-pill {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 9999px;
+  padding: 9px 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.filter-pill:hover {
+  background-color: #2e2e2e;
+}
+
+.filter-pill.is-active {
+  background-color: #d6a628;
+  color: #18181b;
+  font-weight: 600;
+}
+
+/* Carousel Row with Distance Between Arrows and Cards */
+.projects-carousel {
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  align-items: center;
+  gap: 24px;
+}
+
+.projects-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.projects-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+}
+
+.projects-arrow:hover:not(:disabled) {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+
+.projects-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.projects-arrow svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Project Card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.03);
+}
+
+.project-image-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3f3f46;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #18181b;
+  margin: 0 0 8px 0;
+}
+
+.project-description {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #3f3f46;
+  margin: 0 0 12px 0;
+}
+
+.project-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #3f3f46;
+}
+
+.location-pin {
+  width: 14px;
+  height: 14px;
+  color: #18181b;
+  flex-shrink: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-carousel {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 680px) {
+  .projects-section {
+    padding: 52px 16px;
+  }
+
+  .projects-heading {
+    font-size: 32px;
+  }
+
+  .projects-subtitle br {
+    display: none;
+  }
+
+  .projects-carousel {
+    grid-template-columns: 28px 1fr 28px;
+    gap: 10px;
+  }
+
+  .projects-arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

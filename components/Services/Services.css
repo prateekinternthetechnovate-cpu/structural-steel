@@ -1,0 +1,392 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* MAIN SECTION */
+
+.services-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 78px 0 75px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.services-container {
+  width: 80%;
+  max-width: 1265px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.72fr 1fr;
+  column-gap: 41px;
+  align-items: start;
+}
+
+/* =========================
+   LEFT COLUMN
+========================= */
+
+.services-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* INTRO */
+
+.services-intro {
+  width: 100%;
+}
+
+.services-intro h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.24;
+  color: #222222;
+
+  margin: -8px 0 19px;
+  letter-spacing: -0.6px;
+}
+
+.services-intro h1 span {
+  color: #e8c45e;
+}
+
+.services-intro p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #292929;
+
+  margin: 0;
+  max-width: 510px;
+}
+
+/* SERVICE LIST */
+
+.services-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 118px;
+}
+
+.service-tab {
+  width: 100%;
+  display: block;
+
+  padding: 24px 0 23px;
+
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c7c7c7;
+
+  text-align: left;
+
+  font-family: 'DM Serif Display', serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.3;
+
+  color: #999999;
+  cursor: pointer;
+
+  transition: color 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.service-tab:first-child {
+  border-top: none;
+}
+
+.service-tab:hover {
+  color: #222222;
+}
+
+.service-tab.active {
+  color: #222222;
+  border-bottom-color: #555555;
+}
+
+/* =========================
+   RIGHT COLUMN
+========================= */
+
+.services-right {
+  width: 100%;
+  min-width: 0;
+
+  animation: serviceFade 0.4s ease;
+}
+
+@keyframes serviceFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* IMAGE */
+
+.service-image {
+  width: 100%;
+  height: 374px;
+
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+.service-image:hover img {
+  transform: scale(1.025);
+}
+
+/* CONTENT */
+
+.service-content {
+  width: 100%;
+  padding-top: 31px;
+}
+
+.service-content h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.25;
+
+  color: #222222;
+
+  margin: 0 0 19px;
+  letter-spacing: -0.4px;
+}
+
+.service-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.58;
+
+  color: #292929;
+
+  margin: 0 0 19px;
+}
+
+/* =========================
+   QUOTE BUTTON
+========================= */
+
+.service-quote-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  height: 53px;
+  padding: 0 10px 0 23px;
+
+  background: #dfad22;
+  color: #111111;
+
+  border-radius: 50px;
+  text-decoration: none;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  transition: background 0.3s ease;
+}
+
+.service-quote-btn:hover {
+  background: #c99b17;
+  color: #111111;
+}
+
+.quote-arrow {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  color: #111111;
+
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+  .services-container {
+    width: 88%;
+    grid-template-columns: 0.85fr 1fr;
+    gap: 30px;
+  }
+
+  .services-intro h1 {
+    font-size: 32px;
+  }
+
+  .service-tab {
+    font-size: 22px;
+  }
+
+  .service-image {
+    height: 330px;
+  }
+
+  .service-content h2 {
+    font-size: 30px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .services-container {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .services-intro h1 {
+    font-size: 29px;
+  }
+
+  .services-list {
+    margin-top: 75px;
+  }
+
+  .service-tab {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  .service-image {
+    height: 280px;
+  }
+
+  .service-content {
+    padding-top: 25px;
+  }
+
+  .service-content h2 {
+    font-size: 27px;
+  }
+
+  .service-content p {
+    font-size: 12.5px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+  .services-section {
+    padding: 45px 0;
+  }
+
+  .services-container {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .services-intro h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+  }
+
+  .services-intro p {
+    font-size: 13px;
+  }
+
+  .services-list {
+    margin-top: 30px;
+  }
+
+  .service-tab {
+    font-size: 20px;
+    padding: 17px 0;
+  }
+
+  .services-right {
+    margin-top: 0;
+  }
+
+  .service-image {
+    height: 270px;
+    border-radius: 12px;
+  }
+
+  .service-content {
+    padding-top: 22px;
+  }
+
+  .service-content h2 {
+    font-size: 27px;
+    margin-bottom: 14px;
+  }
+
+  .service-content p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .services-intro h1 {
+    font-size: 27px;
+  }
+
+  .service-tab {
+    font-size: 18px;
+  }
+
+  .service-image {
+    height: 220px;
+  }
+
+  .service-content h2 {
+    font-size: 24px;
+  }
+
+  .service-quote-btn {
+    height: 48px;
+    font-size: 13px;
+  }
+}

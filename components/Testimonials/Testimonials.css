@@ -1,0 +1,307 @@
+
+/* Main Section */
+.testimonial-section {
+  width: 100%;
+  min-height: 620px;
+  padding: 70px 5%;
+  background: #fffbf1;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.testimonial-heading {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonial-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 18px;
+}
+
+.testimonial-heading h2 span {
+  color: #e6bf5e;
+}
+
+.testimonial-heading p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #292929;
+  margin: 0 auto;
+}
+
+/* Google Rating */
+.google-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 25px 0 42px;
+}
+
+.google-logo {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.g-blue {
+  color: #4285f4;
+}
+
+.g-red {
+  color: #ea4335;
+}
+
+.g-yellow {
+  color: #fbbc05;
+}
+
+.g-green {
+  color: #34a853;
+}
+
+.rating-stars {
+  color: #f5ad00;
+  font-size: 21px;
+  letter-spacing: -2px;
+}
+
+.rating-stars span {
+  color: #f5ad00;
+}
+
+.google-rating strong {
+  font-size: 18px;
+  color: #222;
+}
+
+.google-reviews {
+  font-size: 17px;
+  color: #222;
+}
+
+/* Slider */
+.testimonial-slider {
+  max-width: 1430px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin: 0 65px;
+}
+
+/* Cards */
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 17px;
+  padding: 23px 25px;
+  min-height: 260px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Customer Details */
+.customer-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.customer-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a946bd;
+  color: white;
+  font-size: 17px;
+}
+
+.avatar-2 {
+  background: #63463c;
+}
+
+.customer-info {
+  flex: 1;
+}
+
+.customer-info h3 {
+  font-size: 19px;
+  margin: 0 0 3px;
+  color: #222;
+  font-weight: 700;
+}
+
+.customer-info span {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Google G Icon */
+.google-icon {
+  font-size: 38px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  background: conic-gradient(
+    from -45deg,
+    #4285f4 0deg 90deg,
+    #34a853 90deg 180deg,
+    #fbbc05 180deg 250deg,
+    #ea4335 250deg 310deg,
+    #4285f4 310deg 360deg
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Customer Stars */
+.customer-stars {
+  color: #f5ad00;
+  font-size: 21px;
+  letter-spacing: -2px;
+  margin-top: 27px;
+}
+
+/* Review Text */
+.customer-review {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #333;
+  margin-top: 24px;
+}
+
+/* Slider Arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #222;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.slider-arrow:hover {
+  background: #e6bf5e;
+  color: #222;
+}
+
+.prev-arrow {
+  left: -18px;
+}
+
+.next-arrow {
+  right: -18px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .testimonial-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-card:nth-child(3) {
+    display: none;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .testimonial-section {
+    padding: 50px 20px;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 27px;
+  }
+
+  .testimonial-heading p {
+    font-size: 14px;
+  }
+
+  .google-rating {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .google-logo {
+    font-size: 22px;
+  }
+
+  .rating-stars {
+    font-size: 17px;
+  }
+
+  .google-reviews {
+    font-size: 14px;
+  }
+
+  .testimonial-cards {
+    grid-template-columns: 1fr;
+    margin: 0 15px;
+  }
+
+  .testimonial-card {
+    min-height: 250px;
+  }
+
+  .testimonial-card:nth-child(2),
+  .testimonial-card:nth-child(3) {
+    display: none;
+  }
+
+  .customer-info h3 {
+    font-size: 17px;
+  }
+
+  .slider-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .prev-arrow {
+    left: -10px;
+  }
+
+  .next-arrow {
+    right: -10px;
+  }
+}

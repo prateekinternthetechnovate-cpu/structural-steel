@@ -1,0 +1,315 @@
+
+/* =================================
+   MAIN NAVBAR
+================================= */
+
+.main-navbar {
+  width: 100%;
+  height: 70px;
+  background-color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =================================
+   LOGO
+================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  width: 190px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+/* =================================
+   NAVIGATION MENU
+================================= */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #e3b329;
+}
+
+/* =================================
+   REQUEST A QUOTE BUTTON
+================================= */
+
+.navbar-quote {
+  height: 49px;
+  min-width: 187px;
+  padding: 5px 8px 5px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  background-color: #e2b127;
+  border-radius: 50px;
+
+  color: #171717;
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.navbar-quote:hover {
+  background-color: #f0c64a;
+  color: #171717;
+  transform: translateY(-2px);
+}
+
+/* Arrow Circle */
+
+.quote-arrow {
+  width: 33px;
+  height: 33px;
+  min-width: 33px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #171717;
+  transition: transform 0.3s ease;
+}
+
+.quote-arrow svg {
+  font-size: 16px;
+}
+
+.navbar-quote:hover .quote-arrow {
+  transform: translateX(3px);
+}
+
+/* =================================
+   DESKTOP / MOBILE BUTTONS
+================================= */
+
+.desktop-quote {
+  display: flex;
+  margin-left: 30px;
+}
+
+.mobile-quote {
+  display: none;
+}
+
+/* =================================
+   MOBILE MENU TOGGLE
+================================= */
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: #e2b127;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* =================================
+   LAPTOP RESPONSIVE
+================================= */
+
+@media (max-width: 1200px) {
+
+  .navbar-container {
+    padding: 0 22px;
+  }
+
+  .navbar-logo img {
+    width: 165px;
+  }
+
+  .navbar-links {
+    gap: 22px;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+
+  .desktop-quote {
+    min-width: 170px;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+}
+
+/* =================================
+   TABLET / MOBILE NAVBAR
+================================= */
+
+@media (max-width: 991px) {
+
+  .main-navbar {
+    height: 75px;
+  }
+
+  .navbar-container {
+    padding: 0 25px;
+  }
+
+  .navbar-logo img {
+    width: 180px;
+    height: 58px;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+  }
+
+  .desktop-quote {
+    display: none;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 75px;
+    left: 0;
+
+    width: 100%;
+    background-color: #1e1e1e;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    transition: max-height 0.4s ease, padding 0.4s ease,
+      visibility 0.4s ease;
+  }
+
+  .navbar-menu.active {
+    max-height: 600px;
+    padding: 25px 0 30px;
+    visibility: visible;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .navbar-links a {
+    font-size: 16px;
+  }
+
+  .mobile-quote {
+    display: flex;
+    margin-top: 25px;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 576px) {
+
+  .main-navbar {
+    height: 70px;
+  }
+
+  .navbar-container {
+    padding: 0 18px;
+  }
+
+  .navbar-logo img {
+    width: 155px;
+    height: 55px;
+  }
+
+  .navbar-menu {
+    top: 70px;
+  }
+
+  .navbar-menu.active {
+    max-height: 600px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 15px;
+  }
+
+  .navbar-toggle {
+    font-size: 23px;
+  }
+}

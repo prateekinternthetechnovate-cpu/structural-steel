@@ -1,0 +1,167 @@
+
+/* Delivery Section */
+
+.delivery-section {
+  width: 100%;
+  background-color: #FFFBF0;
+  padding: 75px 0 80px;
+  overflow: hidden;
+}
+
+.delivery-container {
+  max-width: 1300px;
+}
+
+/* Section Header */
+
+.delivery-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.delivery-header h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #202020;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.delivery-header h2 span {
+  color: #e9bd53;
+}
+
+.delivery-header p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #292929;
+  line-height: 1.55;
+  margin: 0 auto;
+}
+
+/* Cards Layout */
+
+.delivery-row {
+  --bs-gutter-x: 24px;
+  row-gap: 24px;
+}
+
+.delivery-column {
+  display: flex;
+}
+
+/* Individual Card */
+
+.delivery-card {
+  position: relative;
+  width: 100%;
+  height: 543px;
+  border-radius: 17px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.4s ease;
+}
+
+.delivery-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Content */
+
+.delivery-card-content {
+  position: relative;
+  width: 100%;
+  padding: 25px 25px 20px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.delivery-card-content h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.delivery-card-content p {
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #f1f1f1;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 991px) {
+  .delivery-section {
+    padding: 60px 0;
+  }
+
+  .delivery-header h2 {
+    font-size: 32px;
+  }
+
+  .delivery-card {
+    height: 480px;
+  }
+
+  .delivery-card-content h3 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 767px) {
+  .delivery-section {
+    padding: 50px 0;
+  }
+
+  .delivery-header {
+    margin-bottom: 30px;
+    padding: 0 12px;
+  }
+
+  .delivery-header h2 {
+    font-size: 28px;
+  }
+
+  .delivery-header p {
+    font-size: 14px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .delivery-card {
+    height: 450px;
+  }
+
+  .delivery-card-content {
+    padding: 22px;
+  }
+
+  .delivery-card-content h3 {
+    font-size: 23px;
+  }
+
+  .delivery-card-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .delivery-header h2 {
+    font-size: 25px;
+  }
+
+  .delivery-card {
+    height: 400px;
+  }
+}
